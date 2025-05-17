@@ -1,26 +1,26 @@
-from homework.src._internals.CountWordsMixIn import CountWordsMixIn
-from homework.src._internals.ParseArgsMixin import ParseArgsMixin
-from homework.src._internals.PreprocessLinesMixin import PreprocessLinesMixin
-from homework.src._internals.ReadAllLinesMixin import ReadAllLinesMixin
-from homework.src._internals.SplitIntoWordsMixIn import SplitIntoWordsMixIn
-from homework.src._internals.WriteWordCountMixIn import WriteWordCountMixIn
+from homework.src._internals.count_words import CountWordsMixin
+from homework.src._internals.parse_args import ParseArgsMixin
+from homework.src._internals.preprocess_lines import PreprocessLinesMixin
+from homework.src._internals.read_all_lines import ReadAllLinesMixin
+from homework.src._internals.split_into_words import SplitIntoWordsMixin
+from homework.src._internals.write_word_counts import WriteWordCountsMixin
 
 
 class WordCountApp(
     ParseArgsMixin,
     ReadAllLinesMixin,
     PreprocessLinesMixin,
-    SplitIntoWordsMixIn,
-    CountWordsMixIn,
-    WriteWordCountMixIn,
+    SplitIntoWordsMixin,
+    CountWordsMixin,
+    WriteWordCountsMixin,
 ):
     def __init__(self):
         self.input_folder = None
         self.output_folder = None
         self.lines = None
         self.preprocessed_lines = None
-        self.lines = None
-        self.word = None
+        self.words = None
+        self.word_counts = None
 
     def run(self):
 

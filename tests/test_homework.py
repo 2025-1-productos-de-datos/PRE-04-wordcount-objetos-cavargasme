@@ -7,8 +7,6 @@ import subprocess
 def test_homework():
     """Test Word Count"""
 
-    # Carpetas y archivos del paquete homework
-
     for path in [
         "homework/src",
         "homework/src/_internals",
